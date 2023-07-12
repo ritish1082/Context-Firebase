@@ -1,21 +1,28 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore"
 import {getAuth,GoogleAuthProvider,signInWithPopup} from "firebase/auth";
-// import { getAnalytics } from "firebase/analytics";
 
+// copy form firebase config console
 const firebaseConfig = {
-    apiKey: "AIzaSyDLd8ZWEsQoQJtK815h-jB57OlmoVddHm0",
-    authDomain: "vj-collab-859cd.firebaseapp.com",
-    projectId: "vj-collab-859cd",
-    storageBucket: "vj-collab-859cd.appspot.com",
-    messagingSenderId: "261526890320",
-    appId: "1:261526890320:web:031226850f5012a6672e55",
-    measurementId: "G-GVW5H8H320"
+    apiKey: API-KEY,
+    authDomain: AUTH-DOMAIN
+    projectId: PROJECT-ID
+    storageBucket: STORAGEBUCKET-ID
+    messagingSenderId: SENDER-ID
+    appId: APP-ID
+    measurementId: MEASUREMENT-ID
   };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+// provider - for googleSignIn / check firebase auth for GitHub, facebook sign in.
+const provider = new GoogleAuthProvider()
+
+// export auth - for knowing status of auth user
+export const auth = getAuth(app);
+
+// export handleSignIn function 
 export const handleSignIn =  () =>{
     signInWithPopup(auth,provider).then((res)=>{
         console.log(res)
@@ -23,14 +30,11 @@ export const handleSignIn =  () =>{
     .catch((err)=>console.log(err))
 }
 
-
-// export db
+// export db - for CRUD on firebase cloud firestore
 export const db=getFirestore();
 
-export const auth = getAuth(app);
 
-// authentication
-const provider = new GoogleAuthProvider()
+
 
 
 
