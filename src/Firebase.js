@@ -4,13 +4,13 @@ import {getAuth,GoogleAuthProvider,signInWithPopup} from "firebase/auth";
 
 // copy form firebase config console
 const firebaseConfig = {
-    apiKey: API-KEY,
-    authDomain: AUTH-DOMAIN
-    projectId: PROJECT-ID
-    storageBucket: STORAGEBUCKET-ID
-    messagingSenderId: SENDER-ID
-    appId: APP-ID
-    measurementId: MEASUREMENT-ID
+    apiKey: "API-KEY",
+    authDomain: "AUTH-DOMAIN",
+    projected: "PROJECT-ID",
+    storageBucket: "STORAGEBUCKET-ID",
+    messagingSenderId: "SENDER-ID",
+    appId: "APP-ID",
+    measurementId: "MEASUREMENT-ID",
   };
 
 // Initialize Firebase
