@@ -32,11 +32,3 @@ export const handleSignIn =  () =>{
 
 // export db - for CRUD on firebase cloud firestore
 export const db=getFirestore();
-
-
-
-
-
-
-
-
